@@ -8,6 +8,14 @@
     "category": "General",
     "versions": [
       {
+        "version": "1.2.3",
+        "changelog": "See https://github.com/JodliDev/jellyfin-share-plugin/releases/tag/v1.2.3",
+        "targetAbi": "10.11.0.0",
+        "sourceUrl": "https://github.com/JodliDev/jellyfin-share-plugin/releases/download/v1.2.3/jellyfin-plugin-share-1.2.3.zip",
+        "checksum": "d60f31d1fc6699e41d2e7bd0bce476db",
+        "timestamp": "2026-08-18T13:44:57Z"
+      },
+      {
         "version": "1.2.2",
         "changelog": "See https://github.com/JodliDev/jellyfin-share-plugin/releases/tag/v1.2.2",
         "targetAbi": "10.11.0.0",
