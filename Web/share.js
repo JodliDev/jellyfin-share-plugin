@@ -232,7 +232,7 @@
             errorDiv.style.display = 'none';
 
             const shareType = dlg.querySelector('#shareType')?.value || 'single';
-            const expiry = parseInt(dlg.querySelector('#shareExpiry').value);
+            const expiry = parseInt(dlg.querySelector('#shareExpiry').value) * 1440;
             const password = dlg.querySelector('#sharePassword').value || null;
             const maxPlays = parseInt(dlg.querySelector('#shareMaxPlays').value) || null;
             const maxViewers = parseInt(dlg.querySelector('#shareMaxViewers').value) || null;
@@ -246,7 +246,7 @@
                         contentType: 'application/json',
                         data: JSON.stringify({
                             parentItemId: itemId,
-                            expiresInMinutes: expiry * 1440,
+                            expiresInMinutes: expiry,
                             password: password,
                             maxTotalPlays: maxPlays,
                             maxConcurrentViewers: maxViewers
