@@ -142,16 +142,8 @@
                 ` : ''}
 
                 <div class="jfshare-field">
-                    <label class="jfshare-label" for="shareExpiry">Expires in</label>
-                    <select id="shareExpiry" class="jfshare-select">
-                        <option value="60">1 hour</option>
-                        <option value="360">6 hours</option>
-                        <option value="720">12 hours</option>
-                        <option value="1440" selected>24 hours</option>
-                        <option value="4320">3 days</option>
-                        <option value="10080">7 days</option>
-                        <option value="43200">30 days</option>
-                    </select>
+                    <label class="jfshare-label" for="shareExpiry">Expires in (days)</label>
+                    <input type="number" id="shareExpiry" class="jfshare-input" value="1" min="1" autocomplete="off">
                 </div>
 
                 <div class="jfshare-field">
@@ -254,7 +246,7 @@
                         contentType: 'application/json',
                         data: JSON.stringify({
                             parentItemId: itemId,
-                            expiresInMinutes: expiry,
+                            expiresInMinutes: expiry * 1440,
                             password: password,
                             maxTotalPlays: maxPlays,
                             maxConcurrentViewers: maxViewers
